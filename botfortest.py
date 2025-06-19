@@ -11,10 +11,10 @@ import numpy as np
 from transformers import AutoTokenizer, AutoModel
 
 # Инициализация бота
-bot = telebot.TeleBot('7582844720:AAEVKnvycMRvqKDa8QYGRlo6jHLugQ9l_80')
+bot = telebot.TeleBot('УНИКАЛЬНЫЙ_ТОКЕН')
 
 # Загрузка данных из CSV файла
-df = pd.read_csv('D:\\Desktop\\PUSHKA\\бот\\joined_trans.csv')
+df = pd.read_csv('joined_trans.csv')
 
 # Инициализация Elasticsearch
 es_host = "http://localhost:9200"
@@ -37,7 +37,7 @@ last_search_type = {}
 last_shown_image = {}
 
 # Загрузка данных для поиска по описанию
-with open("D:\\Desktop\\PUSHKA\\бот\\titleslinks_descs_23_02.json", "r", encoding="utf-8") as file:
+with open("titleslinks_descs_23_02.json", "r", encoding="utf-8") as file:
     links_descs = json.load(file)
 
 vecs = torch.load("tensor_4.pt")
